@@ -12,17 +12,24 @@ $(document).ready(function(){
 		audio.preloadFX('SOL','audio/SOL.mp3', function(){}, function(e){alert('Error ' + e);});
 		audio.preloadFX('LA','audio/LA.mp3', function(){}, function(e){alert('Error ' + e);});
 		audio.preloadFX('SI','audio/SI.mp3', function(){}, function(e){alert('Error ' + e);});
+		audio.preloadFX('Do','audio/DO.mp3', function(){}, function(e){alert('Error ' + e);});
+		audio.preloadFX('Re','audio/RE.mp3', function(){}, function(e){alert('Error ' + e);});
+		audio.preloadFX('Mi','audio/MI.mp3', function(){}, function(e){alert('Error ' + e);});
+		audio.preloadFX('Fa','audio/FA.mp3', function(){}, function(e){alert('Error ' + e);});
+		audio.preloadFX('Sol','audio/SOL.mp3', function(){}, function(e){alert('Error ' + e);});
+		audio.preloadFX('La','audio/LA.mp3', function(){}, function(e){alert('Error ' + e);});
+		audio.preloadFX('Si','audio/SI.mp3', function(){}, function(e){alert('Error ' + e);});
 		$('.nota').bind('touchstart', function(){//bind escucha cualquier evento, 'touchstart'para donde den tap en la nota
-			//$(this).addClass('tocada');//funcionalidad css que agrega clase
+			$(this).addClass('tocada');//funcionalidad css que agrega clase
 			//audio.play($(this).attr('id'));//play()reproducir la nota, $(this).attr('id') el atributo de quien lo invoco y lo reproduce	
 			}).bind('touchend',function(){//cierra nota .bind
-					$(this).removeClass('tocada');
+					$(this).removeClass('.tocada');
 				});//bind
 				$('.nota1').bind('touchstart', function(){
-					//$(this).addClass('tocada');
+					$(this).addClass('tocada');
 					//audio.play($(this).attr('id'));
 				}).bind('touchend',function(){
-					$(this).removeClass('tocada');
+					$(this).removeClass('.tocada');
 				});		
 	},false); //deviceready
 });//ready
